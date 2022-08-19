@@ -1,6 +1,88 @@
 /*
 * colors
 */
+@-webkit-keyframes skewAction {
+  10% {
+    transform: skew(1deg);
+  }
+  12% {
+    transform: skew(2deg);
+  }
+  14% {
+    transform: skew(3deg);
+  }
+  16% {
+    transform: skew(4deg);
+  }
+  18% {
+    transform: skew(5deg);
+  }
+  20% {
+    transform: skew(6deg);
+  }
+  22% {
+    transform: skew(8deg);
+  }
+  24% {
+    transform: skew(10deg);
+  }
+  26% {
+    transform: skew(12deg);
+  }
+  30% {
+    transform: skew(14deg);
+  }
+  32% {
+    transform: skew(16deg);
+  }
+  34% {
+    transform: skew(18deg);
+  }
+  36% {
+    transform: skew(20deg);
+  }
+}
+@keyframes skewAction {
+  10% {
+    transform: skew(1deg);
+  }
+  12% {
+    transform: skew(2deg);
+  }
+  14% {
+    transform: skew(3deg);
+  }
+  16% {
+    transform: skew(4deg);
+  }
+  18% {
+    transform: skew(5deg);
+  }
+  20% {
+    transform: skew(6deg);
+  }
+  22% {
+    transform: skew(8deg);
+  }
+  24% {
+    transform: skew(10deg);
+  }
+  26% {
+    transform: skew(12deg);
+  }
+  30% {
+    transform: skew(14deg);
+  }
+  32% {
+    transform: skew(16deg);
+  }
+  34% {
+    transform: skew(18deg);
+  }
+  36% {
+    transform: skew(20deg);
+  }
+}
 /*
  * responsive   
 */
@@ -272,6 +354,11 @@ body {
   box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
   border-radius: 8px;
 }
+@media screen and (max-width: 760px) {
+  .page_section_3 article {
+    padding: 20px;
+  }
+}
 .page_section_3 article h4 {
   text-align: center;
   font-size: 1.01rem;
@@ -280,9 +367,19 @@ body {
 .page_section_3 article ol {
   margin-left: 20px;
 }
+@media screen and (max-width: 760px) {
+  .page_section_3 article ol {
+    margin-left: 18px;
+  }
+}
 .page_section_3 article ol li {
   font-size: 0.95rem;
   font-weight: 300;
+}
+@media screen and (max-width: 760px) {
+  .page_section_3 article ol li {
+    font-size: 0.84rem;
+  }
 }
 .page_section_3 article .bottom_text {
   font-size: 0.95rem;
@@ -307,6 +404,12 @@ body {
 }
 .page_section_3 article .instruction_text p:first-child {
   flex: 1;
+}
+@media screen and (max-width: 760px) {
+  .page_section_3 article .instruction_text p {
+    font-size: 0.87rem;
+    line-height: 22px;
+  }
 }
 
 .action_button_container {
@@ -339,89 +442,6 @@ body {
   z-index: 0;
 }
 
-@-webkit-keyframes skewAction {
-  10% {
-    transform: skew(1deg);
-  }
-  12% {
-    transform: skew(2deg);
-  }
-  14% {
-    transform: skew(3deg);
-  }
-  16% {
-    transform: skew(4deg);
-  }
-  18% {
-    transform: skew(5deg);
-  }
-  20% {
-    transform: skew(6deg);
-  }
-  22% {
-    transform: skew(8deg);
-  }
-  24% {
-    transform: skew(10deg);
-  }
-  26% {
-    transform: skew(12deg);
-  }
-  30% {
-    transform: skew(14deg);
-  }
-  32% {
-    transform: skew(16deg);
-  }
-  34% {
-    transform: skew(18deg);
-  }
-  36% {
-    transform: skew(20deg);
-  }
-}
-
-@keyframes skewAction {
-  10% {
-    transform: skew(1deg);
-  }
-  12% {
-    transform: skew(2deg);
-  }
-  14% {
-    transform: skew(3deg);
-  }
-  16% {
-    transform: skew(4deg);
-  }
-  18% {
-    transform: skew(5deg);
-  }
-  20% {
-    transform: skew(6deg);
-  }
-  22% {
-    transform: skew(8deg);
-  }
-  24% {
-    transform: skew(10deg);
-  }
-  26% {
-    transform: skew(12deg);
-  }
-  30% {
-    transform: skew(14deg);
-  }
-  32% {
-    transform: skew(16deg);
-  }
-  34% {
-    transform: skew(18deg);
-  }
-  36% {
-    transform: skew(20deg);
-  }
-}
 .wavy_length {
   -webkit-animation-name: skewAction;
           animation-name: skewAction;
