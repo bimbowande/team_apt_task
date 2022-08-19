@@ -91,7 +91,7 @@ body{
         width: 100%;
         bottom: -10px;
         @include mobile_phones{
-            bottom: -350px;
+            top: 900px;
         }
     }
 }
