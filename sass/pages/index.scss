@@ -27,21 +27,108 @@ body{
   position: relative;
   overflow: hidden;
   background-image: url(../../images/background.png);
+  @include mobile_phones{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
+.page_section{
+    @include mobile_phones{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
 .text_center{
     text-align: center;
 }
 
 
+.page_container_header{
+    padding: 30px 50px;
+    width: 90%;
+    margin: 0 auto;
+    @include flex;
+    justify-content: space-between;
+    @include mobile_phones{
+        padding: 30px 10px;
+        align-items: center;
+    }
+}
+
+.brand_image_container{
+    position: relative;
+}
+
+.brand_image_text{
+  
+    left: 10px;
+    top:10px
+
+}
+
+.brand_image_text, .page_section_5,.coin_container{
+    position: absolute
+}
+
+.brand_icon{
+    @include flex;
+  
+.date_icon{
+    top: 5px;
+    left: 7px;
+}
+}
+
 .page_section{
+    &_1{
+    }
     &_4{
         text-align: center;
     }
     &_5{
-        position: absolute;
+       
         width: 100%;
-        bottom: 0;
+        bottom: -10px;
+        @include mobile_phones{
+            bottom: -200px;
+        }
+    }
+}
+
+.coin_container{
+   
+    width: 100%;
+    top:-20px;
+    @include flex;
+    justify-content: center;
+    align-items: center ;
+
+    &_image{
+        position: relative;
+    }
+}
+
+.coin{
+    &_left_image, &_right_image{
+        position: absolute;
+    }
+    &_left_image{
+        right: 120px;
+    }
+    &_right_image{
+        left: 220px;
+        top: 70px
+    }
+}
+.brand_count_down{
+    margin-left: 10px;
+}
+
+.brand_count_down{
+    & h3{
+        font-family: $inter_font;
     }
 }
 
@@ -52,10 +139,11 @@ body{
 .page_section_2{
    padding-top: 20px;
    position: relative;
-
+   z-index: 87656789876898756765;
    & .image_pattern{
         position: absolute;
         width: 100%;
+        z-index: 2;
         top: 10px;
    }
 }
@@ -65,18 +153,53 @@ body{
         width: 100%;
         max-width: 100%;
         text-align: center;
+        @include mobile_phones{
+            max-width: unset;
+        }
         & img{
             width: clamp(73.5%,0.5vw, 50%);
+            @include mobile_phones{
+                height: 300px;
+                width: 300px;
+                transform: scale(1.9);
+            }
         }
+    }
+    @include mobile_phones{
+        width: 120%;
     }
 }
 
 .page_header_text{
+   
     & .header_text{
         font-size: $large_text;
         line-height: 3.82rem;
+        margin: 0 auto;
+        @include mobile_phones{
+            display:none;
+        }
     }
 }
+
+.mobile_text_header{
+    display: none;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 45px;
+    @include mobile_phones{
+        display: block;
+    }
+}
+
+
+.font-weight_1{
+    font-weight: 100;
+}
+.font-weight_2{
+    font-weight: 200;
+}
+
 
 .header_lighter_text{
     font-weight: 300;
@@ -85,14 +208,36 @@ body{
 .page_header_taglinetext{
     padding-top: 30px;
     font-size: 1.95rem;
+    @include mobile_phones{
+        display: none;
+    }
     & h4{
         font-weight: 300;
         font-family: $inter_font;
     }
 }
 
+.mobile_text_tagline{
+    display: none;
+    padding-top: 20px;
+    @include mobile_phones{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    & h4{
+        @include mobile_phones{
+            font-size: 1.0rem;
+        }
+    }
+}
+
  .bolder_text{
     font-weight: 600;
+}
+
+.relative_container{
+    position: relative;
 }
 
 .page_section_3{
@@ -102,7 +247,6 @@ body{
     position: relative;
     & article{
         padding: 30px;
-       
         width: 530px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.39) -213.5%, rgba(255, 255, 255, 0) 100%);
         box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
@@ -151,7 +295,9 @@ body{
 
 .action_button_container{
     margin-top: 40px;
-
+    z-index: 678765678987677777;
+    position: absolute;
+    width: 100%;
     & button{
         padding: 15px;
         width: 180px;
@@ -175,8 +321,10 @@ body{
 /*
 * section 5
 */
+
 .animated_image_container{
     text-align: center;
+    z-index: 0;
 }
 
 
@@ -251,17 +399,25 @@ body{
 
 .wavy_length{
     animation-name: skewAction;
-    position: relative;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-iteration-count: infinite;
     animation-duration: 8s;
 }
 .image_animated_container_2{
     text-align: center;
+
+    @include mobile_phones{
+        overflow: hidden;
+        bottom: 0;
+        margin-top: 40px;
+    }
     & img{
         width: 30%;
         position: relative;
         top:35px;
+        @include mobile_phones{
+            top: 22px;
+        }
     }
 }
 
@@ -367,13 +523,14 @@ body{
     }
     &_2{
         left: 70px;
-      
+        
         // animation-name: roller_2;
         // animation-iteration-count: infinite;
         // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         // animation-duration: 1200ms;
     }
     &_3{
+        right: 230px;
     }
     &_4{
         right: 40px;
@@ -384,3 +541,22 @@ body{
 }
 
 
+.ray_3{
+    & img{
+        width: 150px;
+    }
+}
+
+.coin_image_container{
+    position: absolute;
+}
+
+.coinpot_container{
+   
+    & img{
+       @include mobile_phones{
+        width: 100%;
+        position: relative;
+       }
+    }
+}
