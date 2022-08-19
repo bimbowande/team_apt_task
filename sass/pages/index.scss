@@ -88,11 +88,10 @@ body{
         text-align: center;
     }
     &_5{
-       
         width: 100%;
         bottom: -10px;
         @include mobile_phones{
-            bottom: -200px;
+            bottom: -350px;
         }
     }
 }
