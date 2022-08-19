@@ -430,13 +430,24 @@ body{
     top: 140px;
     left: -100px;
     display: flex;
+    @include mobile_phones{
+        width: 100%;
+        left: -220px;
+    }
 }
 
 .ray_img_container{
     position: absolute;
     width: 200px;
+    @include mobile_phones{
+        width: 100%;
+       
+    }
     & img{
         width: 400px;
+        @include mobile_phones{
+            width: 350px;
+        }
     }
 }
 
@@ -514,15 +525,18 @@ body{
 // }
 .ray{
     &_1{
-        left: 30px;
-        // animation-name: roller_1;
-        // animation-iteration-count: infinite;
-        // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-        // animation-duration: 1500ms;
+        left: 0px;
+        @include mobile_phones{
+           
+            left: 10px;
+        }
     }
     &_2{
         left: 70px;
-        
+        @include mobile_phones{
+            
+            left: 25px;
+        }
         // animation-name: roller_2;
         // animation-iteration-count: infinite;
         // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -530,12 +544,27 @@ body{
     }
     &_3{
         right: 230px;
+        @include mobile_phones{
+           
+            left: 200px;
+        }
     }
     &_4{
         right: 40px;
+        @include mobile_phones{
+           
+            left: 400px;
+        }
     }
     &_5{
         right: 100px;
+        @include mobile_phones{
+           
+            left: 10px;
+            @include mobile_phones{
+                left :350px;
+            }
+        }
     }
 }
 

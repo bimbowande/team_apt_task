@@ -451,29 +451,75 @@ body {
   left: -100px;
   display: flex;
 }
+@media screen and (max-width: 760px) {
+  .image_animated_container_1 {
+    width: 100%;
+    left: -220px;
+  }
+}
 
 .ray_img_container {
   position: absolute;
   width: 200px;
 }
+@media screen and (max-width: 760px) {
+  .ray_img_container {
+    width: 100%;
+  }
+}
 .ray_img_container img {
   width: 400px;
 }
+@media screen and (max-width: 760px) {
+  .ray_img_container img {
+    width: 350px;
+  }
+}
 
 .ray_1 {
-  left: 30px;
+  left: 0px;
+}
+@media screen and (max-width: 760px) {
+  .ray_1 {
+    left: 10px;
+  }
 }
 .ray_2 {
   left: 70px;
 }
+@media screen and (max-width: 760px) {
+  .ray_2 {
+    left: 25px;
+  }
+}
 .ray_3 {
   right: 230px;
+}
+@media screen and (max-width: 760px) {
+  .ray_3 {
+    left: 200px;
+  }
 }
 .ray_4 {
   right: 40px;
 }
+@media screen and (max-width: 760px) {
+  .ray_4 {
+    left: 400px;
+  }
+}
 .ray_5 {
   right: 100px;
+}
+@media screen and (max-width: 760px) {
+  .ray_5 {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 760px) and (max-width: 760px) {
+  .ray_5 {
+    left: 350px;
+  }
 }
 
 .ray_3 img {
