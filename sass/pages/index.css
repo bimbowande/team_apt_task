@@ -19,6 +19,10 @@ html, body {
 
 body {
   font-size: 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .page_container {
@@ -52,14 +56,14 @@ body {
 
 .page_container_header {
   padding: 30px 50px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 760px) {
   .page_container_header {
-    padding: 30px 10px;
+    padding: 30px 0px;
     align-items: center;
   }
 }
@@ -105,6 +109,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 760px) {
+  .coin_container {
+    width: 90%;
+  }
+}
 .coin_container_image {
   position: relative;
 }
@@ -118,6 +127,11 @@ body {
 .coin_right_image {
   left: 220px;
   top: 70px;
+}
+@media screen and (max-width: 760px) {
+  .coin_right_image {
+    left: 180px;
+  }
 }
 
 .brand_count_down {
