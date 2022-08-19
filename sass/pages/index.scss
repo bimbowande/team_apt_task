@@ -324,6 +324,10 @@ body{
         color: $white_color;
         border-radius: 4px;
         font-family: $inter_font;
+        @include mobile_phones{
+            width: 60%;
+            padding: 25px;
+        }
     }
 }
 

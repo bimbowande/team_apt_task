@@ -426,6 +426,12 @@ body {
   border-radius: 4px;
   font-family: "Inter", sans-serif;
 }
+@media screen and (max-width: 760px) {
+  .action_button_container button {
+    width: 60%;
+    padding: 25px;
+  }
+}
 
 .action_button img {
   width: 8px;
